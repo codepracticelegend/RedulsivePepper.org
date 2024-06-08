@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedulsivePepper</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: purple;
+            padding: 20px;
+        }
+        .options button {
+            color: white;
+            background-color: black;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .options button:hover {
+            background-color: darkslateblue;
+            transform: scale(1.05);
+        }
+        .optionfeatures1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .optionfeatures2 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+        }
+        .optionfeatures2 p {
+            color: white;
+            user-select: none;
+            font-size: 1.5em;
+            margin: 0 5px;
+        }
+        .aboutus {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .aboutus p {
+            margin: 10px 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="options">
+        <div class="optionfeatures2">
+            <p>RedulsivePepper.org</p>
+        </div>
+        <div class="optionfeatures1">
+            <button onclick="loadm3u8()">M3U8 Viewer (coming soon) </button>
+            <button onclick="openDC()">Discord Tool Panel</button>
+        </div>
+    </div>
+
+    <div class="aboutus">
+        <p>
+            This Website Allows Users To 
+            <br>
+            Use Online Tools Completely Free!
+            <br>
+            We are also working on making 
+            <br>
+            it so you can create tools
+            <br>
+            for others to use as well!
+            <br>
+            There are multiple everyday tools that will 
+            <br>
+            be added onto here so stay tuned!
+        </p>
+    </div>
+<script>
+    function loadm3u8() {
+        window.location = 'm3u8load.html';
+    }
+function openDC() {
+    window.location = 'Discord Tool Menu.html';
+}
+    </script>
+</body>
+</html>

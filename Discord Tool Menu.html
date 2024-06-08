@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="List Of Tools That Allow You To Run Scripts On The Discord Website!">
+    <title>Discord Tool Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .homebutton {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .homebutton button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .homebutton button:hover {
+            background-color: #0056b3;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 600px;
+            color: #555;
+        }
+        ul li {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        ul li:first-child {
+            background-color: #e9ecef;
+            font-weight: bold;
+        }
+        p {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 20px auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="homebutton">
+        <button onclick="home()">Home</button>
+    </div>
+    <h1>Current Discord Tool Bookmarklet</h1>
+    <ul>
+        Comes with:
+        <li>1. Edit Users Text</li>
+        <li>2. Coming Soon</li>
+    </ul>
+    <p>
+        javascript:(function(){    var newWindow = window.open('', '_blank', 'width=600,height=400');        var makeEditableButton = document.createElement('button');    makeEditableButton.textContent = 'Make Editable';    makeEditableButton.style.marginRight = '5px';    makeEditableButton.style.marginLeft = '5px';    makeEditableButton.style.cursor = 'pointer';        makeEditableButton.onclick = function() {        document.body.contentEditable = true;        makeEditableButton.disabled = true;        makeUneditableButton.disabled = false;    };        var makeUneditableButton = document.createElement('button');    makeUneditableButton.textContent = 'Make Uneditable';    makeUneditableButton.style.marginRight = '5px';    makeUneditableButton.style.marginLeft = '5px';    makeUneditableButton.style.cursor = 'pointer';        makeUneditableButton.onclick = function() {        document.body.contentEditable = false;        makeEditableButton.disabled = false;        makeUneditableButton.disabled = true;    };    newWindow.document.body.appendChild(makeEditableButton);    newWindow.document.body.appendChild(makeUneditableButton);})();
+    </p>
+    <script>
+        function home() {
+            window.location = 'index.html';
+        }
+    </script>
+</body>
+</html>
